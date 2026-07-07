@@ -17,12 +17,12 @@
       "hidden": true
     },
     {
-      "name": release,
+      "name": "release",
       "configurePreset": "release",
       "inherits": "base"
     },
     {
-      "name": debug",
+      "name": "debug",
       "configurePreset": "debug",
       "inherits": "base"
     },
