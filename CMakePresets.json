@@ -62,14 +62,8 @@
     {
       "name": "sanitizers",
       "steps": [
-        {
-          "type": "configure",
-          "name": "sanitizers"
-        },
-        {
-          "type": "build",
-          "name": "sanitizers"
-        }
+        { "type": "configure", "name": "sanitizers" },
+        { "type": "build",     "name": "sanitizers" }
       ]
     }
   ]
