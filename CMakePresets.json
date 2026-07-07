@@ -30,6 +30,7 @@
       "name": "sanitizers",
       "configurePreset": "sanitizers",
       "inherits": "base"
+    }
   ],
   "workflowPresets": [
     {
