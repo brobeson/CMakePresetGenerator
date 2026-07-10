@@ -1,0 +1,49 @@
+{
+  "version": 10,
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "description": "Configure for a debug build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "description": "Configure for a release build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build",
+      "displayName": "Build",
+      "description": "Build the software",
+      "configuration": "Try to get the configure preset name",
+      "configurePreset": ["debug", "release"]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "test-ci",
+      "displayName": "CI Tests",
+      "description": "Run tests in a CI pipeline",
+      "configuration": "Try to get the configure preset name",
+      "output": {
+        "outputJUnitFile": "TestResults.xml",
+      },
+      "configurePreset": ["debug", "release"]
+    },
+    {
+      "name": "test-dev",
+      "displayName": "Developer Tests",
+      "description": "Run tests on a developer workstation",
+      "configuration": "Try to get the configure preset name",
+      "configurePreset": ["debug", "release"]
+    }
+  ]
+}
