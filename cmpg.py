@@ -36,6 +36,7 @@ def replicate_presets(key: str, templates: dict) -> list:
       for configure_preset in preset["configurePresets"]:
         new_preset = preset
         new_preset["configurePresets"] = configure_preset
+        new_preset["name"] = f"{configure_preset}.{new_preset["name"]}"
         presets.append(new_preset)
   return presets
 
